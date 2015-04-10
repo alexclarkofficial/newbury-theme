@@ -65,9 +65,6 @@
     </div>
     <!-- begin mobile-nav -->
     <ul class="mobile-nav">
-      <li class="mobile-nav__item mobile-nav__search">
-        {% include 'search-bar' %}
-      </li>
       {% for link in linklists.main-menu.links %}
         {% comment %}
           Create a dropdown menu by naming a linklist the same as a link in the parent nav
@@ -175,6 +172,9 @@
             {% else %}
               </div>
             {% endif %}
+            <div class="site-header__search">
+              {% include 'search-bar' %}
+            </div>
           </div>
           <div class="grid__item large--one-half large--text-right medium-down--hide">
             {% comment %}
@@ -216,10 +216,6 @@
                 {% endif %}
               </div>
             {% endif %}
-
-            <div class="site-header__search">
-              {% include 'search-bar' %}
-            </div>
           </div>
         </div>
 
